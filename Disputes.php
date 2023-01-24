@@ -1,0 +1,67 @@
+<?php
+session_start();
+?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name = "viewport" content="width=device-wifth, initial-scale=1.0">
+        <title> Dispute Page</title>
+        <link rel ="stylesheet" href="Disputes.css">
+        <script src="https://kit.fontawesome.com/595311b478.js" crossorigin="anonymous"></script> 
+     
+      </head>
+<body>
+    <div class="container">
+        <a class="navbar-brand" href="http://localhost/index.html?Adults=9">Air Connect</a>
+        <div class="form-box">
+            <h2 id="title">
+                Dispute
+            </h2>
+            <form method="post" action = "Disputes1.php">
+                <div class="input-field">
+                    <i class="fa-regular fa-lock"></i>
+                    <input name = "txtEmail" id = "Email" type = "email" placeholder="Email">
+                </div>
+                <div class="input-field">
+                    <i class="fa-regular fa-lock"></i>
+                    <input name = "txtDisSubject" id = "txtDisSubject" type = "text" placeholder="Subject of Dispute">
+                </div>
+                <div class="input-field-1">
+                    <i class="fa-sharp fa-solid fa-align-justify"></i>
+                    <input name = "txtDescription" id = "txtDescription" type = "text" placeholder="Description">
+                </div>
+                <div class="button-field">
+                    <button type="submit" name="Submit" >Submit</button>               
+                </div>
+            </form>
+        </div>
+        <div class="SideBar">
+            <a class="main" href="http://localhost/Customer.php">Profile</a>
+            <a href="http://localhost/privacy.php">Privacy</a>
+            <a href="http://localhost/Disputes.php">Disputes</a>
+            <div class="Logout">
+                <?php session_abort();?>
+                <a href="http://localhost/User_SignIn.html">Log-Out</a>
+            </div>
+            <div class="User">
+                Customer Account 
+            </div>
+          
+                    
+            </form>
+        </div>
+        
+    </div>
+</body>
+<!-- <script>
+
+    function Profile() {
+      if(isset($_POST['Profile'])){
+          
+        window.location = "http://127.0.0.1:5501/Customer.html#DashBoard";
+      }
+    }
+  </script> -->
+
+</html>
